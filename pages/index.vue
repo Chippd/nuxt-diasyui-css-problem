@@ -24,11 +24,11 @@
     </div>
 
     <p class="mt-5">
-      We see that the index page that is generated is quite heavy (36kb) for the content that is on it.
+      We see that the index page that is generated is quite heavy (43kb) for the content that is on it.
     </p>
     <figure>
       <img src="/images/size.png" alt="Index page size">
-      <figcaption class="text-sm text-gray-400 mt-2">Network tab showing the index page size of 36kb</figcaption>
+      <figcaption class="text-sm text-gray-400 mt-2">Network tab showing the index page size of 43kb</figcaption>
     </figure>
 
     <p class="mt-5">
@@ -44,6 +44,20 @@
       <figcaption class="text-sm text-gray-400 mt-2">Searching the project for the included classes brings up no results</figcaption>
     </figure>
 
+  </div>
+
+  <div class="divider" />
+
+  <div class="mb-20">
+    <h2 class="text-2xl font-light tracking-wider">
+      My Question
+    </h2>
+    <p>
+      How can I ensure that the unused classes are removed from the compiled CSS?
+    </p>
+    <p>
+      Thank you in advance for your help. 🙂
+    </p>
   </div>
 </div>
 

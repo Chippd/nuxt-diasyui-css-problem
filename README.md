@@ -1,10 +1,39 @@
-# Nuxt Minimal Starter
+# DaisyUI CSS Optimization Issue
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## The Problem
 
-## Setup
+When building this Nuxt project for production, we're encountering an issue with CSS optimization. Specifically:
 
-Make sure to install dependencies:
+1. The built pages are unnecessarily large (~43kb) due to included unused CSS classes
+2. CSS purging doesn't seem to be working as expected
+3. Many unused DaisyUI classes are being included in the final build
+
+### What We've Tried
+
+- Following the official [DaisyUI installation guide](https://daisyui.com/docs/install/)
+- Comparing our setup with the [official Nuxt3 DaisyUI example](https://stackblitz.com/edit/daisyui-nuxt3?file=package.json)
+- Building and previewing the project:
+  ```bash
+  npx nuxi build
+  npx nuxi preview
+  ```
+
+### Current Behavior
+
+When building the project:
+- The index page is ~43kb (much larger than expected)
+- The built output includes many unused CSS classes
+- These unused classes don't appear anywhere in our source code
+
+### What We Need
+
+We need to find a way to ensure unused CSS classes are properly removed during the build process to optimize our bundle size.
+
+---
+
+## Standard Project Commands
+
+### Setup
 
 ```bash
 # npm
@@ -20,9 +49,7 @@ yarn install
 bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+### Development
 
 ```bash
 # npm
@@ -38,9 +65,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
-
-Build the application for production:
+### Production
 
 ```bash
 # npm
@@ -56,7 +81,7 @@ yarn build
 bun run build
 ```
 
-Locally preview production build:
+### Preview
 
 ```bash
 # npm
@@ -72,4 +97,6 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Additional Resources
+- [Nuxt Documentation](https://nuxt.com/docs/getting-started/introduction)
+- [Deployment Documentation](https://nuxt.com/docs/getting-started/deployment)
