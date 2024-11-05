@@ -57,14 +57,13 @@
             @blur="closeToolsMenu"
           >
             <summary class="btn btn-ghost m-1">
-              Tools
-
+              Test Dropdown
             </summary>
             <ul class="menu dropdown-content bg-base-200 rounded-box z-[1] w-52 p-2 shadow">
               <li>
                 <NuxtLink
                   class=""
-                  to="/ai-face-shape-analysis"
+                  to="/"
                 >
                   Option 1
                 </NuxtLink>
@@ -72,14 +71,14 @@
               <li>
                 <NuxtLink
                   class=""
-                  to="/hair"
+                  to="/"
                 >
                   Option 2
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink
-                  to="/hair-colour-changer"
+                  to="/"
                   class=""
                 >
                   Option 3
@@ -88,9 +87,7 @@
             </ul>
           </details>
         </div>
-        <div class="flex-none">
-          Top navbar
-        </div>
+        
       </div>
       <!-- Page content here -->
       <slot />
